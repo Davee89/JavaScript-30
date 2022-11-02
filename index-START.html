@@ -62,6 +62,8 @@
         return bandsCut;
       });
       bandsCut.sort();
+
+      document.querySelector("#bands").innerHTML = bandsCut.map((band) => `<li>${band}</li>`).join("");
     </script>
   </body>
 </html>
