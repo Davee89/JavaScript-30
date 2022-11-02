@@ -45,6 +45,23 @@
 
     <script>
       const bands = ["The Plot in You", "The Devil Wears Prada", "Pierce the Veil", "Norma Jean", "The Bled", "Say Anything", "The Midway State", "We Came as Romans", "Counterparts", "Oh, Sleeper", "A Skylit Drive", "Anywhere But Here", "An Old Dog"];
+      let bandsCut = [];
+      bands.forEach(function (e) {
+        if (e.includes("The")) {
+          x = e.replace("The ", "");
+          bandsCut.push(x);
+        } else if (e.includes("An")) {
+          x = e.replace("An ", "");
+          bandsCut.push(x);
+        } else if (e.includes("A")) {
+          x = e.replace("A ", "");
+          bandsCut.push(x);
+        } else {
+          bandsCut.push(e);
+        }
+        return bandsCut;
+      });
+      bandsCut.sort();
     </script>
   </body>
 </html>
